@@ -64,8 +64,14 @@ def printout(big_list):
     
     '''Prints everything'''
     
-    print(big_list)
-
+    for i in range(1,len(big_list)+1):
+        print("{:>2}{:>3}".format(i," "),end="")
+        for j in range(0,len(big_list[i-1])):
+            if j == (len(big_list[i-1])/2):
+                print(" ",end="")
+            print("{:>2}".format(str(big_list[i-1][j])),end="")
+        print("")
+        
 
 def main():
     moreseats = True
